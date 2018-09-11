@@ -17,8 +17,10 @@ const descriptionList = document.querySelector('#result');
 console.log('ResultView has descriptionList', descriptionList);
 const paragraph = document.createElement('p');
 paragraph.textContent = `${instrumentObject.description}`;
+while (descriptionList.firstChild) {
+  descriptionList.removeChild(descriptionList.firstChild);
+}
 descriptionList.appendChild(paragraph);
-
 };
 
 module.exports =  ResultView;
