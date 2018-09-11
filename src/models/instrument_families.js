@@ -36,14 +36,14 @@ const InstrumentFamilies = function() {
       console.log('has instrument name:', instrumentName);
       const result = this.getInstrumentDetails(instrumentName);
       console.log('bindEvents has result:', result);
+      PubSub.publish('Instrument:details', result);
     });
   };
 
   InstrumentFamilies.prototype.getInstrumentDetails = function (instrumentName) {
-    return this.instrumentFamilies.find((instrument) => {return instrumentName === instrument.name;
-      // console.log('getInstrumentDetails has instrument Name:', instrumentName);
+    return this.instrumentFamilies.find((instrument) => {return instrumentName === instrument.name; });
 
-    });
+
     // console.log('getInstrumentDetails has result:', result);
   };
 

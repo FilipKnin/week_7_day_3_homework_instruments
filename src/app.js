@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const formView = new FormView();
   formView.bindEvents();
 
+  const resultView = new ResultView();
+  resultView.bindEvents();
+
   const instrumentFamilies = new InstrumentFamilies();
   instrumentFamilies.bindEvents();
+
+
 
 });
